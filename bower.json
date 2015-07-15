@@ -1,0 +1,21 @@
+{
+  "name": "elm-router",
+  "version": "0.0.0",
+  "homepage": "https://github.com/boxdot/elm-router",
+  "authors": [
+    "boxdot <d@zerovolt.org>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "route-recognizer": "~0.1.7",
+    "router.js": "~1.0.3",
+    "rsvp": "~3.0.18"
+  }
+}
