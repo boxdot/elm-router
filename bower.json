@@ -15,7 +15,6 @@
   ],
   "dependencies": {
     "route-recognizer": "~0.1.7",
-    "router.js": "~1.0.3",
     "rsvp": "~3.0.18"
   }
 }

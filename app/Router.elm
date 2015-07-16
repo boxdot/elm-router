@@ -1,7 +1,8 @@
 module Router where
 
-
 import Html exposing (..)
+
+import Native.Router
 
 -- TYPES
 
@@ -23,6 +24,16 @@ routeChangeP = Signal.mailbox ""
 onRoute : HandlerName -> Signal HandlerName
 onRoute handler =
     Signal.filter ((==) handler) "" routeChangeP.signal
+
+
+--setup : List Route -> List (Signal Html) -> Signal Html
+--setup routes handlers =
+--    let handlers' = Native.Router.embed routes handlers
+--    in
+--        Signal.mergeMany handlers'
+
+setup : List Route -> ()
+setup = Native.Router.setup
 
 -- RENDER
 

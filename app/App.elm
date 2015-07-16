@@ -24,13 +24,21 @@ handlers =
     ]
 
 
-main = layout <| div [] [ text "Hello, World!" ]
+main = 
+    div [] [ text "Hello, World!" ] |> layout 
 
 
 layout : Html -> Html
 layout outlet =
     div [ class "container" ]
         [ h1 [] [ text "Router Example" ]
-        , br [] []
+        , ul [] 
+            [ li [] [ a [ href "#" ] [ text "home" ] ] 
+            , li [] [ a [ href "#/about" ] [ text "about" ] ] 
+            ]
+        , hr [] []
         , outlet
         ]
+
+port setupRoutes : ()
+port setupRoutes = Router.setup routes
