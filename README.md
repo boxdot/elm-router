@@ -1,0 +1,1 @@
+For testing run `make` and open `index.html` in browser.

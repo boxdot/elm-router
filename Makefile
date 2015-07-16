@@ -1,6 +1,7 @@
-all: copy-libs elm.js
+SRC_FILES=App.elm Router.elm pages/About.elm pages/Home.elm Native/Router.js
+SRCS=$(addprefix app/,$(SRC_FILES))
 
-SRCS=$(addprefix app/,App.elm Router.elm pages/About.elm pages/Home.elm Native/Router.js)
+all: copy-libs elm.js
 
 elm.js: $(SRCS)
 	elm make app/App.elm
